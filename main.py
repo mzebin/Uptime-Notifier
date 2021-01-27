@@ -14,7 +14,11 @@ def push_notification(hours):
 
 
 def get_uptime():
-    pass
+    stream = os.popen("uptime")
+    output = stream.read().split()[2][:-1]
+
+    uptime = output.split(":")
+    return uptime
 
 # Loop
 
