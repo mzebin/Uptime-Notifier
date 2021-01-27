@@ -9,7 +9,8 @@ osascript -e 'display notification "{} hours since boot up." with title "Uptime-
 # Functions
 
 def push_notification(hours):
-    pass
+    os.system(OSASCRIPT.format(hours))
+    time.sleep(70)
 
 
 def get_uptime():
