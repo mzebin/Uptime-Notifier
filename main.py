@@ -23,5 +23,6 @@ def get_uptime():
 # Loop
 while True:
     uptime = get_uptime()
-    if len(uptime) != 2:
-        push_notification(int(uptime[0]))
+    if int(uptime[1]) == 59:
+        time.sleep(60)
+        push_notification(int(uptime[0]) + 1)
