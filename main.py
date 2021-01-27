@@ -21,4 +21,7 @@ def get_uptime():
     return uptime
 
 # Loop
-
+while True:
+    uptime = get_uptime()
+    if int(uptime[1]) == 0:
+        push_notification(int(uptime[0]))
